@@ -3,7 +3,7 @@ title: lab4
 date: 2024-12-05T15:26:08Z
 lastmod: 2024-12-13T16:29:23Z
 ---
-
+```shell
 clay@SCV:~/spark$ tree -L 1
 .
 ├── README.md
@@ -13,7 +13,7 @@ clay@SCV:~/spark$ tree -L 1
 ├── task1.py
 ├── task2.py
 └── task3.ipynb
-
+```
 
 # lab4
 
