@@ -98,7 +98,7 @@ print(f"2014年8月的活跃用户总数: {active_users_count}")
 * 使用 `groupByKey`​ 操作按照用户ID进行分组，对于每个用户ID对应的一组日期值，通过 `mapValues`​ 操作计算这组日期中不同日期的数量（也就是活跃天数），得到以用户ID为键，活跃天数为值的新的键值对RDD（ `user_active_days_rdd`​ ）。
 * 通过 `filter`​ 操作筛选出活跃天数大于等于5的用户对应的键值对，并使用 `count`​ 方法统计这样的用户数量，将统计结果存储在 `active_users_count`​ 变量中，同时打印出相应的提示信息，展示2014年8月的活跃用户总数。
 
-​![image](assets/image-20241209165929-mkln0ch.png)​
+![image](assets/image-20241209165929-mkln0ch.png)​
 
 # 2：Spark SQL 编程
 
@@ -131,7 +131,7 @@ ORDER BY
 
 结果保存至`task2.1_avg_balance.csv`​
 
-​![image](assets/image-20241211230309-1pjolob.png)​
+![image](assets/image-20241211230309-1pjolob.png)​
 
 #### 2 、统计每个城市总流量前 3 ⾼的⽤户：
 
@@ -162,7 +162,7 @@ WHERE ranking <= 3;
 
 结果保存至`task2.2_top3_users.csv`​
 
-​![image](assets/image-20241211230408-8jrdbbz.png)​
+![image](assets/image-20241211230408-8jrdbbz.png)​
 
 # 3： Spark ML 编程
 
@@ -226,9 +226,9 @@ redeem_predictions=predict_future(model2,last_day_index,30)
 redeem_predictions.show()
 ```
 
-​![image](assets/image-20241213162838-y2tx261.png)​
+![image](assets/image-20241213162838-y2tx261.png)​
 
-​![image](assets/image-20241213162845-shb1g3u.png)​
+![image](assets/image-20241213162845-shb1g3u.png)​
 
 将预测结果保存到csv文件
 
@@ -265,4 +265,6 @@ result=result.withColumn("total_redeem_amt",result["total_redeem_amt"].cast("int
 result.coalesce(1).write.csv("output/task3.result", header=False, mode="overwrite")
 ```
 
-‍
+
+
+![image-20241215164700232](./assets/image-20241215164700232.png)
